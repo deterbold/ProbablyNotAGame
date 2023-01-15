@@ -9,21 +9,32 @@
 /* Begin PBXBuildFile section */
 		4249A3152951DD6400B2CC67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4249A3142951DD6400B2CC67 /* AppDelegate.swift */; };
 		4249A3172951DD6400B2CC67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4249A3162951DD6400B2CC67 /* SceneDelegate.swift */; };
-		4249A3192951DD6400B2CC67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4249A3182951DD6400B2CC67 /* ViewController.swift */; };
 		4249A31C2951DD6400B2CC67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4249A31A2951DD6400B2CC67 /* Main.storyboard */; };
 		4249A31E2951DD6700B2CC67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4249A31D2951DD6700B2CC67 /* Assets.xcassets */; };
 		4249A3212951DD6700B2CC67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4249A31F2951DD6700B2CC67 /* LaunchScreen.storyboard */; };
+		4249A32A2951DE3500B2CC67 /* Lumina in Frameworks */ = {isa = PBXBuildFile; productRef = 4249A3292951DE3500B2CC67 /* Lumina */; };
+		4249A32C2951DF8500B2CC67 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4249A32B2951DF8500B2CC67 /* TitleScreen.swift */; };
+		4249A32E2951DF9F00B2CC67 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4249A32D2951DF9F00B2CC67 /* GameScreen.swift */; };
+		4249A3302951DFB700B2CC67 /* TutorialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4249A32F2951DFB700B2CC67 /* TutorialScreen.swift */; };
+		4249A3322951E00200B2CC67 /* LeaderboardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4249A3312951E00200B2CC67 /* LeaderboardScreen.swift */; };
+		4249A3342951E02000B2CC67 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4249A3332951E02000B2CC67 /* AboutScreen.swift */; };
+		4249A3372951F80A00B2CC67 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4249A3362951F80A00B2CC67 /* MobileNetV2.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4249A3112951DD6400B2CC67 /* ProbablyNotAGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProbablyNotAGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4249A3142951DD6400B2CC67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4249A3162951DD6400B2CC67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4249A3182951DD6400B2CC67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4249A31B2951DD6400B2CC67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4249A31D2951DD6700B2CC67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4249A3202951DD6700B2CC67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4249A3222951DD6700B2CC67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4249A32B2951DF8500B2CC67 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
+		4249A32D2951DF9F00B2CC67 /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
+		4249A32F2951DFB700B2CC67 /* TutorialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScreen.swift; sourceTree = "<group>"; };
+		4249A3312951E00200B2CC67 /* LeaderboardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardScreen.swift; sourceTree = "<group>"; };
+		4249A3332951E02000B2CC67 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
+		4249A3362951F80A00B2CC67 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4249A32A2951DE3500B2CC67 /* Lumina in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +68,17 @@
 		4249A3132951DD6400B2CC67 /* ProbablyNotAGame */ = {
 			isa = PBXGroup;
 			children = (
+				4249A3362951F80A00B2CC67 /* MobileNetV2.mlmodel */,
 				4249A3142951DD6400B2CC67 /* AppDelegate.swift */,
 				4249A3162951DD6400B2CC67 /* SceneDelegate.swift */,
-				4249A3182951DD6400B2CC67 /* ViewController.swift */,
+				4249A31F2951DD6700B2CC67 /* LaunchScreen.storyboard */,
 				4249A31A2951DD6400B2CC67 /* Main.storyboard */,
 				4249A31D2951DD6700B2CC67 /* Assets.xcassets */,
-				4249A31F2951DD6700B2CC67 /* LaunchScreen.storyboard */,
+				4249A32B2951DF8500B2CC67 /* TitleScreen.swift */,
+				4249A32D2951DF9F00B2CC67 /* GameScreen.swift */,
+				4249A3312951E00200B2CC67 /* LeaderboardScreen.swift */,
+				4249A32F2951DFB700B2CC67 /* TutorialScreen.swift */,
+				4249A3332951E02000B2CC67 /* AboutScreen.swift */,
 				4249A3222951DD6700B2CC67 /* Info.plist */,
 			);
 			path = ProbablyNotAGame;
@@ -83,6 +100,9 @@
 			dependencies = (
 			);
 			name = ProbablyNotAGame;
+			packageProductDependencies = (
+				4249A3292951DE3500B2CC67 /* Lumina */,
+			);
 			productName = ProbablyNotAGame;
 			productReference = 4249A3112951DD6400B2CC67 /* ProbablyNotAGame.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 4249A3082951DD6400B2CC67;
+			packageReferences = (
+				4249A3282951DE3500B2CC67 /* XCRemoteSwiftPackageReference "Lumina" */,
+			);
 			productRefGroup = 4249A3122951DD6400B2CC67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4249A3192951DD6400B2CC67 /* ViewController.swift in Sources */,
+				4249A32E2951DF9F00B2CC67 /* GameScreen.swift in Sources */,
 				4249A3152951DD6400B2CC67 /* AppDelegate.swift in Sources */,
+				4249A3372951F80A00B2CC67 /* MobileNetV2.mlmodel in Sources */,
+				4249A3302951DFB700B2CC67 /* TutorialScreen.swift in Sources */,
+				4249A3322951E00200B2CC67 /* LeaderboardScreen.swift in Sources */,
+				4249A32C2951DF8500B2CC67 /* TitleScreen.swift in Sources */,
 				4249A3172951DD6400B2CC67 /* SceneDelegate.swift in Sources */,
+				4249A3342951E02000B2CC67 /* AboutScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +321,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +329,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = software.ridiculous.probablynot.agame.ProbablyNotAGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,8 +351,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,6 +359,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = software.ridiculous.probablynot.agame.ProbablyNotAGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -358,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4249A3282951DE3500B2CC67 /* XCRemoteSwiftPackageReference "Lumina" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dokun1/Lumina.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4249A3292951DE3500B2CC67 /* Lumina */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4249A3282951DE3500B2CC67 /* XCRemoteSwiftPackageReference "Lumina" */;
+			productName = Lumina;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4249A3092951DD6400B2CC67 /* Project object */;
 }

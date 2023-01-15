@@ -1,24 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="title_screen" storyboardIdentifier="title_screen" id="BYZ-38-t0r" customClass="TitleScreen" customModule="ProbablyNotAGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ts-Nq-QeT">
+                                <rect key="frame" x="157" y="271" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSN-zj-t7i">
+                                <rect key="frame" x="0.0" y="736" width="393" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7Xj-nf-gRM"/>
+                                    <barButtonItem title="About" id="NfU-lg-0FM">
+                                        <connections>
+                                            <segue destination="XiY-oF-0DT" kind="presentation" identifier="title_to_about" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="FhN-Vy-zfS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XSI-Yx-6LM"/>
+                                    <barButtonItem title="Play!" id="F8W-ZF-MO7">
+                                        <connections>
+                                            <action selector="playButton:" destination="BYZ-38-t0r" id="Vkn-uQ-FhB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kOI-Os-HVj"/>
+                                    <barButtonItem title="Tutorial" id="gnS-Zz-X13">
+                                        <connections>
+                                            <segue destination="Vkx-10-eH4" kind="presentation" identifier="title_to_tutorial" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="zIX-bR-hDi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oXq-bx-fRw"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hSN-zj-t7i" secondAttribute="bottom" constant="38" id="8E2-wS-kla"/>
+                            <constraint firstItem="3ts-Nq-QeT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="212" id="Bf6-2h-oFS"/>
+                            <constraint firstItem="hSN-zj-t7i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vgj-Fn-AhH"/>
+                            <constraint firstItem="3ts-Nq-QeT" firstAttribute="centerX" secondItem="hSN-zj-t7i" secondAttribute="centerX" id="fEm-OG-DeL"/>
+                            <constraint firstItem="3ts-Nq-QeT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m1C-gi-dR8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TitleLabel" destination="3ts-Nq-QeT" id="Gba-gA-zwk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131" y="-432"/>
+        </scene>
+        <!--About Screen-->
+        <scene sceneID="3wX-h5-0bo">
+            <objects>
+                <viewController id="XiY-oF-0DT" customClass="AboutScreen" customModule="ProbablyNotAGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rwa-xe-SrC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkK-ta-tj2">
+                                <rect key="frame" x="150" y="335" width="92" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-GK-1oW">
+                                <rect key="frame" x="-1" y="755" width="394" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pbU-Db-mAg"/>
+                                    <barButtonItem title="Back" image="arrow.backward" catalog="system" id="Tan-l1-ty8">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="about_to_title" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="aim-Jf-FCI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JkV-C2-FfD"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sH9-Dx-Lkc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="aboutLabel" destination="nkK-ta-tj2" id="SmN-hu-amH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixy-ML-SLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="803"/>
+        </scene>
+        <!--Leaderboard Screen-->
+        <scene sceneID="ZCg-4w-K1a">
+            <objects>
+                <viewController id="lF8-mC-s3R" customClass="LeaderboardScreen" customModule="ProbablyNotAGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SLO-o8-XgZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="v7T-cb-aLx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jP9-C0-RPA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1131" y="803"/>
+        </scene>
+        <!--Game Screen-->
+        <scene sceneID="vKr-Pr-GEb">
+            <objects>
+                <viewController id="ZlS-uj-4tr" customClass="GameScreen" customModule="ProbablyNotAGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WP3-b6-Sxd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q6k-2C-ewL">
+                                <rect key="frame" x="-1" y="744" width="393" height="43"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Cpr-qO-A9Q"/>
+                                    <barButtonItem title="Back" image="arrow.left" catalog="system" id="bdp-w7-OfH"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7fr-1W-afr"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sEr-t3-Zvg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adr-0F-0pF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924" y="-774"/>
+        </scene>
+        <!--Tutorial Screen-->
+        <scene sceneID="KkM-yW-rRZ">
+            <objects>
+                <viewController id="Vkx-10-eH4" customClass="TutorialScreen" customModule="ProbablyNotAGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UyJ-qb-LC2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sWp-mu-RAQ">
+                                <rect key="frame" x="0.0" y="730" width="392" height="43"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bvK-tR-RXo"/>
+                                    <barButtonItem title="Back" image="arrow.left" catalog="system" id="aqX-GJ-nf2">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="tutorial_to_intro" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="v5U-pO-xQB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sID-2R-BJR"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zCu-NS-3Kb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5X-OK-VH1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923" y="-35"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="v5U-pO-xQB"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
